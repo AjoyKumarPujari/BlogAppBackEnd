@@ -28,7 +28,7 @@ exports.getAllPosts = async (req, res) => {
     try {
         //const posts = await Post.find();
         //const posts = await Post.find().populate("likes").populate("comments").exac();
-        const posts = await Post.find().populate("comments");
+        const posts = await Post.find().populate("comments").populate("likes");
         res.json({
             posts,
         })
